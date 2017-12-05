@@ -24,6 +24,7 @@ function runTheApp() {
 //   console.warn("error "+err.code+": "+err.message);
 // });
 
+
 var data = {
     labels: ['Mon', '', '', '', '', '', '', 'Fri'],
     series: [
@@ -32,8 +33,8 @@ var data = {
 };
 
 var options = {
-    width: 256,
-    height: 150,
+    width: "80vw",
+    height: "40vw",
     showPoint: true,
     fullWidth: true,
     axisX: {
@@ -48,10 +49,17 @@ var options = {
     chartPadding: {
         top: 15,
         right: 15,
-        bottom: 5,
+        bottom: 0,
         left: 0
     },
 
 };
 
-new Chartist.Line('.ct-chart', data, options);
+var responsiveOptions = [
+    ["screen and (min-width: 500px)", {
+        width: "352px",
+        height: "214px"
+    }]
+];
+
+new Chartist.Line('.ct-chart', data, options, responsiveOptions);
