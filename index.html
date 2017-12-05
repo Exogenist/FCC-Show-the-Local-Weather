@@ -13,20 +13,26 @@
     <title>WeatherGo!</title>
 </head>
 
-<body>
+<body id="screen">
     <div class="background">
         <div class="appWrap">
+           
             <h1 class="location">Clear</h1>
             <p class="descript">Summit Park, US</p>
-            <img class="icon" src="http://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/day_ek2dlt.svg" alt="">
-            <p class="temp">24&#176;<span class="deg">C</span></p>
+            
+            
+            <div class="temp-core">
+              <img class="icon" src="http://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/day_ek2dlt.svg" alt="">
+               <p class="temp">24&#176;C</p> 
+               
+            </div>
 
             <div class="menu">
                 <div class="link-bar">
                     <?xml version="1.0" encoding="utf-8"?>
                     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39px" height="39px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
                     <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="14.439" x2="43.376" y2="14.439"/>
                     <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="21.225" x2="43.376" y2="21.225"/>
                     <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="28.258" x2="43.377" y2="28.258"/>
@@ -40,13 +46,13 @@
                     <?xml version="1.0" encoding="utf-8"?>
                     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg class="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                    <svg class="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39px" height="39px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
                     <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="6.267,34.64 21.063,19.84 36.932,23.92 46,14 "/>
                     <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="4.875" cy="35.819" r="2.313"/>
                     <circle stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="46" cy="14" r="2.313"/>
                     </svg>
 
-                    <hr>
+<!--                    <hr>-->
 
 
                     <!--
@@ -76,11 +82,16 @@
 
 -->
 
-                    <div class="ct-chart ct-perfect-fourth"></div>
-
+                    <div class="ct-chart ct-perfect-fourth">
+                        
+                    </div>
+                    <p class="sig">Coded by Swainson Holness</p>
+                    
 
                 </div>
+                
             </div>
+<!--            <p class="sig">Coded by Swainson Holness</p>-->
         </div>
     </div>
 
