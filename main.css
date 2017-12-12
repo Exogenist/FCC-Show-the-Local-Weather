@@ -9,7 +9,7 @@ body {
 .appWrap {
     margin: 0px 10% 0px 10%;
     display: grid;
-    grid-template-rows: auto 8vh 80vw 260px 1fr auto;
+    grid-template-rows: auto auto auto auto 1fr auto;
 }
 
 .location {
@@ -27,10 +27,10 @@ body {
 
 .icon {
     display: block;
-    width: 80vw;
+    width: 180px;
     height: auto;
     margin: auto;
-    position: absolute;
+    /*    position: absolute;*/
     /*
     right: 60px;
     top: 60px;
@@ -40,7 +40,7 @@ body {
 .temp {
     padding: 0px;
     margin: 0px;
-    margin-top: 5vw;
+    /*    margin-top: 5vw;*/
     /*    margin-top: 140px;*/
     font-size: 3em;
     /*    justify-self: center;*/
@@ -66,7 +66,7 @@ body {
     padding: 0px 0px 0px 0px;
     justify-self: center;
     display: grid;
-    margin-bottom: 5vw;
+    /*    margin-bottom: 5vw;*/
 }
 
 .ct-series-a .ct-point {
@@ -98,6 +98,7 @@ body {
 
 .menu {
     /*    height: 256px;*/
+    margin-top: 50px;
 }
 
 .link-bar {
@@ -125,12 +126,23 @@ hr {
     height: 160px;
 }
 
+@media screen and (max-width: 400px) {
+    .ct-chart {
+    height: 120px;
+}
+}
+
 .ct-chart-line {
     padding-top: 0px;
 }
 
+
 .temp-core {
-    position: relative;
+    /*    position: relative;*/
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+*/
 }
 
 .sig {
@@ -157,11 +169,15 @@ hr {
     }
 
     .icon {
-        width: 350px;
+        /*
+        display: block;
+        margin: 0 auto;
+width: 190px;
+*/
     }
 
     .temp {
-        margin-top: 40px;
+        /*        margin-top: 40px;*/
     }
 
     .appWrap {
@@ -171,4 +187,41 @@ hr {
     .sig {
         padding-top: 70px;
     }
+    
+    .menu {
+        margin-top: 0px;
+    }
+    
+    .ct-chart {
+        height: 190px;
+    }
+}
+
+#timeStmp {
+/*    padding-top: 30px;*/
+text-align: center;
+    font-size: 0.5em;
+/*    font-weight: bold;*/
+} 
+
+.iconForecast {
+    width: 64px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+/*    background-color: #f1f1f1;*/
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
