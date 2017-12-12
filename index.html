@@ -9,89 +9,39 @@
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-        <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
     <title>WeatherGo!</title>
 </head>
 
 <body id="screen">
     <div class="background">
         <div class="appWrap">
-           
-            <h1 class="location">Clear</h1>
-            <p class="descript">Summit Park, US</p>
-            
-            
+
+            <h1 class="location" id="dataWeatherMain"></h1>
+            <p class="descript" id="dataName"></p>
+
+
             <div class="temp-core">
-              <img class="icon" src="http://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/day_ek2dlt.svg" alt="">
-               <p class="temp">24&#176;C</p> 
-               
+                <img class="icon" id="animImg" src="http://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/load.svg" alt="">
+                <p class="temp" id="dataTemp"><span id="deg"></span></p>
             </div>
 
             <div class="menu">
                 <div class="link-bar">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39px" height="39px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="14.439" x2="43.376" y2="14.439"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="21.225" x2="43.376" y2="21.225"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.528" y1="28.258" x2="43.377" y2="28.258"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="11.527" y1="35.29" x2="43.377" y2="35.29"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="6.31" y1="14.439" x2="7.786" y2="14.439"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="6.31" y1="21.225" x2="7.786" y2="21.225"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="6.31" y1="35.29" x2="7.786" y2="35.29"/>
-                    <line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="6.31" y1="28.258" x2="7.786" y2="28.258"/>
-                    </svg>
-
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg class="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39px" height="39px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-                    <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="6.267,34.64 21.063,19.84 36.932,23.92 46,14 "/>
-                    <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="4.875" cy="35.819" r="2.313"/>
-                    <circle stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="46" cy="14" r="2.313"/>
-                    </svg>
-
-<!--                    <hr>-->
-
-
-                    <!--
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg class="chrt" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="100.295px" viewBox="0 0 256 100.295" enable-background="new 0 0 256 100.295" xml:space="preserve">               
-    
-                        <polyline
-                        fill="none"
-                        stroke="#0074d9"
-                        stroke-width="1"
-                        points="
-                        00,100
-                        32,60
-                        64,80
-                        96,20
-                        128,80
-                        160,80
-                        192,60
-                        224,100
-                        256,100
-                        "
-                        />
-    
-                    </svg>
-
-
--->
-
-                    <div class="ct-chart ct-perfect-fourth">
-                        
+                    <div class="ct-chart ct-perfect-fourth"></div>
+                </div>
+                <p id="timeStmp"></p>
+                <br>
+                <div class="forecast">
+                    <div class="chip">
+                        <img src="https://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/01d.svg" alt="Person" width="96" height="96"> Mon: Clear Sky 24&#176;F
                     </div>
-                    <p class="sig">Coded by Swainson Holness</p>
-                    
+                    <div class="chip">
+                        <img src="https://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/11d.svg" alt="Person" width="96" height="96"> Tue: Clear Sky 24&#176;F
+                    </div>
 
                 </div>
-                
             </div>
-<!--            <p class="sig">Coded by Swainson Holness</p>-->
         </div>
     </div>
 
