@@ -50,6 +50,8 @@ function getDataWeather(lat, lon) {
 
         //Animated icon
         document.getElementById("animImg").setAttribute("src", "http://res.cloudinary.com/dxaedzhnh/image/upload/v1510274955/" + data.weather[0].icon + ".svg");
+        
+        
     }).fail(function () {
         console.log("error: load ajax data");
     });
@@ -82,22 +84,23 @@ function constGraph(a,b,c,x,y,z,s,g,A,B) {
     };
 
     var options = {
-        width: "80vw",
+        width: "100%",
         height: "40vw",
         showPoint: true,
         fullWidth: true,
         axisX: {
             showGrid: false,
             showLabel: true,
+            offset: 5
         },
         axisY: {
             showGrid: false,
-            showLabel: true,
-            offset: 25
+            showLabel: false,
+            offset: 0
         },
         chartPadding: {
-            top: 15,
-            right: 15,
+            top: 0,
+            right: 0,
             bottom: 0,
             left: 0
         },
@@ -106,7 +109,7 @@ function constGraph(a,b,c,x,y,z,s,g,A,B) {
 
     var responsiveOptions = [
     ["screen and (min-width: 500px)", {
-            width: "352px",
+            width: "100%",
             height: "214px"
     }]
 ];
